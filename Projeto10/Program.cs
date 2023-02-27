@@ -14,9 +14,8 @@ namespace Projeto10
             string nome = Console.ReadLine();
             Console.WriteLine("Preço; ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.WriteLine("Quantidade; ");
-            int quantidade = int.Parse(Console.ReadLine());
-            Produto Prod = new Produto(nome, preco, quantidade);
+            Produto Prod = new Produto(nome, preco);
+
             Console.WriteLine();
             Console.WriteLine("Dados do produto; " +Prod);
             Console.WriteLine();
