@@ -20,10 +20,7 @@ namespace Projeto10
             Quantidade = quantidade;
         }
 
-        public Produto(string nome, double preco)
-        {
-            Nome = nome;
-            Preco = preco;
+        public Produto(){
         }
 
         public double ValorTotalEmEstoque()
