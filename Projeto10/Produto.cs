@@ -12,11 +12,18 @@ namespace Projeto10
         private string _nome;
         private double _preco;
         private int _quantidade;
-
-        public string GetNome()
+        public string Nome
         {
-            return _nome;   
+            get { return _nome; }
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
         }
+        
         public double GetPreco()
         {
             return _preco; 
@@ -24,13 +31,6 @@ namespace Projeto10
         public int GetQuantidade()
         {
             return _quantidade;
-        }
-
-        public void SetNome(string nome)
-        {
-            if(nome != null && nome.Length > 1) { 
-                _nome = nome;
-            }
         }
         public void SetPreco(double preco)
         {

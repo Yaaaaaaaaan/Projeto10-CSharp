@@ -11,12 +11,11 @@ namespace Projeto10
     {
         static void Main(string[] args)
         {
+            Produto Prod = new Produto();
             Console.WriteLine("Insira o nome; ");
-            string nome = Console.ReadLine();
+            Prod.Nome = Console.ReadLine();
             Console.WriteLine("Preço; ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Produto Prod = new Produto();
-            Prod.SetNome(nome);
             Prod.SetPreco(preco);
             Console.WriteLine();
             Console.WriteLine("Dados do produto; " +Prod);
