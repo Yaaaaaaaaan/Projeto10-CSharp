@@ -11,8 +11,7 @@ namespace Projeto10
     {
         private string _nome;
         private double _preco;
-        public double Preco { get; private set; }
-        public int Quantidade { get; private set; }
+        private int _quantidade;
         public string Nome
         {
             get { return _nome; }
@@ -24,31 +23,53 @@ namespace Projeto10
                 }
             }
         }
+        public double Preco
+        {
+            get { return _preco; }
+            set
+            {
+                if (value != 0)
+                {
+                    _preco = value;
+                }
+            }
+        }
+        public int Quantidade
+        {
+            get { return _quantidade; }
+            set
+            {
+                if (value != 0)
+                {
+                    _quantidade = value;
+                }
+            }
+        }
         public void SetQuantidade(int quantidade)
         {
             if(quantidade != 0) {
-                Quantidade = quantidade;
+                _quantidade = quantidade;
             }
         }
         public double ValorTotalEmEstoque()
         {
-            return _preco * Quantidade;
+            return _preco * _quantidade;
         }
         public void AdicionarProdutos(int quantidade)
         {
-            Quantidade += quantidade;
+            _quantidade += quantidade;
         }
         public void RemoverProdutos(int quantidade)
         {
-            Quantidade -= quantidade;
+            _quantidade -= quantidade;
         }
         public override string ToString()
         {
             return _nome
             + ", $ "
-            + Preco.ToString("F2", CultureInfo.InvariantCulture)
+            + _preco.ToString("F2", CultureInfo.InvariantCulture)
             + ", "
-            + Quantidade
+            + _quantidade
             + " unidades, Total: $ "
             + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
