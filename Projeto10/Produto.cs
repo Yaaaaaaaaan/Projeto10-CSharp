@@ -28,19 +28,23 @@ namespace Projeto10
 
         public void SetNome(string nome)
         {
-            _nome = nome;
+            if(nome != null && nome.Length > 1) { 
+                _nome = nome;
+            }
         }
         public void SetPreco(double preco)
         {
-            _preco = preco;
+            if (preco != 0)
+            {
+                _preco = preco;
+            }  
         }
         public void SetQuantidade(int quantidade)
         {
-            _quantidade = quantidade;
+            if(quantidade != 0) {
+                _quantidade = quantidade;
+            }
         }
-        public Produto(){
-        }
-
         public double ValorTotalEmEstoque()
         {
             return _preco * _quantidade;
