@@ -13,13 +13,31 @@ namespace Projeto10
         private double _preco;
         private int _quantidade;
 
-        public Produto(string nome, double preco, int quantidade)
+        public string GetNome()
         {
-            _nome = nome;
-            _preco = preco;
-            _quantidade = quantidade;
+            return _nome;   
+        }
+        public double GetPreco()
+        {
+            return _preco; 
+        }
+        public int GetQuantidade()
+        {
+            return _quantidade;
         }
 
+        public void SetNome(string nome)
+        {
+            _nome = nome;
+        }
+        public void SetPreco(double preco)
+        {
+            _preco = preco;
+        }
+        public void SetQuantidade(int quantidade)
+        {
+            _quantidade = quantidade;
+        }
         public Produto(){
         }
 

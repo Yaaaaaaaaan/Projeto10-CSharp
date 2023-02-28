@@ -15,8 +15,9 @@ namespace Projeto10
             string nome = Console.ReadLine();
             Console.WriteLine("Preço; ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Produto Prod = new Produto(nome, preco);
-
+            Produto Prod = new Produto();
+            Prod.SetNome(nome);
+            Prod.SetPreco(preco);
             Console.WriteLine();
             Console.WriteLine("Dados do produto; " +Prod);
             Console.WriteLine();
@@ -31,6 +32,7 @@ namespace Projeto10
             Prod.RemoverProdutos(qtd);
             Console.WriteLine();
             Console.WriteLine("Dados atualizados; " + Prod);
+            Console.ReadLine();
         }
     }
 }
