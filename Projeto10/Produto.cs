@@ -23,21 +23,27 @@ namespace Projeto10
                 }
             }
         }
-        
-        public double GetPreco()
+        public double Preco
         {
-            return _preco; 
-        }
-        public int GetQuantidade()
-        {
-            return _quantidade;
-        }
-        public void SetPreco(double preco)
-        {
-            if (preco != 0)
+            get { return _preco; }
+            set
             {
-                _preco = preco;
-            }  
+                if (value != 0)
+                {
+                    _preco = value;
+                }
+            }
+        }
+        public int Quantidade
+        {
+            get { return _quantidade; }
+            set
+            {
+                if (value != 0)
+                {
+                    _quantidade = value;
+                }
+            }
         }
         public void SetQuantidade(int quantidade)
         {
