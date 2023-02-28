@@ -15,8 +15,7 @@ namespace Projeto10
             Console.WriteLine("Insira o nome; ");
             Prod.Nome = Console.ReadLine();
             Console.WriteLine("Preço; ");
-            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Prod.SetPreco(preco);
+            Prod.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.WriteLine();
             Console.WriteLine("Dados do produto; " +Prod);
             Console.WriteLine();
